@@ -5,7 +5,7 @@
         <Header />
       </el-header>
       <el-container>
-        <el-aside class="xg-menu">
+        <el-aside class="xg-menu" style="width:200px">
           <Menu></Menu>
         </el-aside>
         <el-main class="main-container">
@@ -21,11 +21,10 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './views/Header.vue'
-import Menu from './views/Menu.vue'
+import Menu from './views/Menu'
 
 export default {
   name: 'app',
-
   components: {
     HelloWorld,
     Header,
@@ -41,17 +40,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-   margin-top: 60px;
+  margin-top: 60px;
 }
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.header-box{
+.header-box {
   background: skyblue;
 }
-.xg-menu{
-  width: 200px;
+.xg-menu {
+  /* width: 200px; */
   min-height: calc(100vh - 60px);
 }
 </style>

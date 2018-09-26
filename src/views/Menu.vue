@@ -1,7 +1,7 @@
 <template>
    <el-menu
       default-active="2"
-      router
+      :router="true"
       class="el-menu-vertical-demo menu"
       @open="handleOpen"
       @close="handleClose"
