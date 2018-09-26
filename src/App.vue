@@ -1,39 +1,57 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <div>
-      <el-button>
-        <router-link to="/">home</router-link>
-      </el-button>
-      <el-button>
-        <router-link to="/about">about</router-link>
-      </el-button>
-    </div>
-    <router-view></router-view>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <el-container>
+      <el-header class="header-box">
+        <Header />
+      </el-header>
+      <el-container>
+        <el-aside class="xg-menu">
+          <Menu></Menu>
+        </el-aside>
+        <el-main class="main-container">
+          <router-view></router-view>
+        </el-main>
+      </el-container>
+    </el-container>
+
   </div>
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Header from './views/Header.vue'
+import Menu from './views/Menu.vue'
 
 export default {
   name: 'app',
 
   components: {
-    HelloWorld
+    HelloWorld,
+    Header,
+    Menu
   }
 }
-
 </script>
 
 <style>
-#app {
+.main-container {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+   margin-top: 60px;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.header-box{
+  background: skyblue;
+}
+.xg-menu{
+  width: 200px;
+  min-height: calc(100vh - 60px);
 }
 </style>
